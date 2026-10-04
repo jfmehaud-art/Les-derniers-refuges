@@ -60,58 +60,58 @@ rescue:{name:"Point de secours",icon:"🚑",scene:"ending",links:[]}
 };
 const S={
 start:{ch:"Chapitre 1 · Le matin gris",title:"La vallée silencieuse",art:"valley",text:"À l’aube, le ciel est couleur de plomb. En contrebas, une colonne de fumée monte près de la route. Aucun réseau, aucun moteur. Une carte papier indique trois options : la forêt, le torrent ou une piste pastorale. Vous devez atteindre un abri avant la nuit.",choices:[
-["Suivre le sentier forestier","Terrain couvert, mais balisage ancien.", "forest","observation",7,{energy:-1}],
-["Descendre vers le torrent","De l’eau possible, avec des berges raides.","torrent","endurance",8,{energy:-1}],
-["Prendre la piste pastorale","Un détour plus long, mais une pente plus douce.","shepherd","sangfroid",7,{time:1}]
+["Suivre le sentier forestier","Terrain couvert, mais balisage ancien.", "forest","observation",5,{energy:-1}],
+["Descendre vers le torrent","De l’eau possible, avec des berges raides.","torrent","endurance",6,{energy:-1}],
+["Prendre la piste pastorale","Un détour plus long, mais une pente plus douce.","shepherd","sangfroid",5,{time:1}]
 ]},
 forest:{ch:"Chapitre 2 · Sous les sapins",title:"Des traces récentes",art:"forest",text:"La forêt étouffe les bruits de la vallée. Des empreintes fraîches quittent le chemin et une bande de tissu est accrochée à une branche. La pluie rend le sol glissant. Vous pouvez examiner les traces ou avancer vers les hauteurs.",choices:[
-["Examiner les empreintes","Comprendre leur direction peut éviter un détour.","cabin","observation",8,{time:1}, {clue:1}],
+["Examiner les empreintes","Comprendre leur direction peut éviter un détour.","cabin","observation",6,{time:1}, {clue:1}],
 ["Garder le cap vers la crête","Vous ne perdez pas de temps à enquêter.","ridge",null,0,{energy:-1}],
-["Chercher du bois sec et un abri bref","Vous récupérez un peu, mais la lumière baisse.","cabin","technique",7,{energy:1,time:1}]
+["Chercher du bois sec et un abri bref","Vous récupérez un peu, mais la lumière baisse.","cabin","technique",5,{energy:1,time:1}]
 ]},
 torrent:{ch:"Chapitre 2 · L’eau froide",title:"Le torrent gonflé",art:"river",text:"L’eau paraît claire, mais elle peut être contaminée. Une passerelle de service oscille au-dessus du courant. De l’autre côté, un sentier remonte vers une cabane. Une chute ici pourrait vous coûter très cher.",choices:[
-["Filtrer et traiter l’eau avant de remonter","Méthode prudente, mais il faut du matériel.","cabin","technique",7,{time:1},{water:2}],
-["Franchir la passerelle avec précaution","Un test d’endurance pour traverser sans tomber.","bridge","endurance",8,{energy:-1}],
-["Longer le torrent jusqu’au passage bas","Plus long, avec un risque de glissade.","bridge","observation",7,{time:1}]
+["Filtrer et traiter l’eau avant de remonter","Méthode prudente, mais il faut du matériel.","cabin","technique",5,{time:1},{water:2}],
+["Franchir la passerelle avec précaution","Un test d’endurance pour traverser sans tomber.","bridge","endurance",6,{energy:-1}],
+["Longer le torrent jusqu’au passage bas","Plus long, avec un risque de glissade.","bridge","observation",5,{time:1}]
 ]},
 shepherd:{ch:"Chapitre 2 · La piste pastorale",title:"Le vieux chemin",art:"path",text:"Le chemin monte entre des murets et des pâturages détrempés. Une boîte métallique sous un auvent contient quelques allumettes et une carte déchirée. Au loin, une fumée indique peut-être une présence humaine.",choices:[
-["Fouiller l’auvent","Vous prenez le temps de vérifier les lieux.","cabin","observation",7,{time:1},{item:"Allumettes étanches",clue:1}],
+["Fouiller l’auvent","Vous prenez le temps de vérifier les lieux.","cabin","observation",5,{time:1},{item:"Allumettes étanches",clue:1}],
 ["Marcher directement vers la cabane","Le ciel s’assombrit et il faut avancer.","cabin",null,0,{energy:-1}],
 ["Suivre la fumée vers la crête","Le raccourci passe sur un terrain exposé.","ridge","endurance",9,{energy:-1}]
 ]},
 bridge:{ch:"Chapitre 3 · Le passage",title:"La passerelle abîmée",art:"bridge",text:"Une planche manque au milieu de la passerelle. Le torrent frappe les piles de bois. De l’autre côté, des marques de peinture signalent un sentier vers le hameau. Vous entendez un appel étouffé depuis la rive aval.",choices:[
-["Réparer sommairement la planche","Si vous avez des outils, l’opération est plus facile.","cabin","technique",8,{time:1},{clue:1}],
+["Réparer sommairement la planche","Si vous avez des outils, l’opération est plus facile.","cabin","technique",6,{time:1},{clue:1}],
 ["Traverser lentement en gardant trois appuis","Une traversée risquée, mais directe.","cabin","endurance",9,{energy:-1}],
 ["Descendre voir qui appelle","Vous pourriez aider quelqu’un, ou vous mettre en danger.","meeting","sangfroid",8,{time:1}]
 ]},
 ridge:{ch:"Chapitre 3 · La pente exposée",title:"Vent sur la crête",art:"ridge",text:"Le vent forcit et des rafales chassent la pluie en travers du sentier. Vous apercevez la cabane forestière en contrebas, mais un pierrier barre la ligne la plus directe. Il faut choisir entre contourner, tenter le passage ou rebrousser chemin.",choices:[
-["Contourner le pierrier par le sentier balisé","Le détour prend du temps, mais limite le risque.","cabin","observation",7,{time:1}],
+["Contourner le pierrier par le sentier balisé","Le détour prend du temps, mais limite le risque.","cabin","observation",5,{time:1}],
 ["Franchir le passage rocheux","Une erreur peut provoquer une chute.","cabin","endurance",10,{health:-1,energy:-1}],
 ["Redescendre vers la forêt","Vous renoncez à la crête et économisez vos forces.","forest",null,0,{time:1}]
 ]},
 cabin:{ch:"Chapitre 4 · Un toit pour la nuit",title:"La cabane forestière",art:"cabin",text:"La cabane est ancienne, mais son toit tient encore. À l’intérieur : des cendres froides, une boîte de conserve vide et une carte avec des annotations. Des pas crissent dehors. Une femme se tient à l’entrée, l’avant-bras bandé avec un morceau de chemise. Elle se présente comme Claire.",choices:[
-["Lui parler ouvertement et proposer de l’aide","Une attitude calme peut établir la confiance.","meeting","sangfroid",7,{food:-1,water:-1},{trust:2}],
-["Rester en retrait et l’observer","Vous cherchez à évaluer le risque avant d’agir.","meeting","observation",8,{time:1},{clue:1}],
+["Lui parler ouvertement et proposer de l’aide","Une attitude calme peut établir la confiance.","meeting","sangfroid",5,{food:-1,water:-1},{trust:2}],
+["Rester en retrait et l’observer","Vous cherchez à évaluer le risque avant d’agir.","meeting","observation",6,{time:1},{clue:1}],
 ["Lui demander de partir","Vous gardez vos réserves, mais restez seul.","night",null,0,{trust:-2}]
 ]},
 meeting:{ch:"Chapitre 4 · Rencontre",title:"Claire a besoin d’aide",art:"person",text:"Claire s’est séparée de son frère pendant l’évacuation. Elle pense qu’il a rejoint le hameau de l’autre côté du col. Son entaille semble superficielle, mais elle manque d’eau. Elle connaît un itinéraire vers le hameau, à condition de traverser la passerelle ou de prendre la crête.",choices:[
-["Nettoyer et panser sa blessure","Un kit de soins améliore vos chances de bien faire.","cabin","sangfroid",7,{food:-1},{trust:2,item:"Carte annotée"}],
+["Nettoyer et panser sa blessure","Un kit de soins améliore vos chances de bien faire.","cabin","sangfroid",5,{food:-1},{trust:2,item:"Carte annotée"}],
 ["Partager l’eau et partir ensemble","Vous gagnez une alliée, mais dépensez vos réserves.","village","force",7,{water:-1},{trust:1}],
 ["Lui donner des indications puis continuer seul","Vous l’aidez sans former de groupe.","night",null,0,{water:-1},{trust:1}]
 ]},
 night:{ch:"Chapitre 5 · Le mauvais temps",title:"La nuit tombe",art:"storm",text:"Le vent se lève et la température chute. Vous devez choisir un abri. La cabane offre un toit, mais le hameau pourrait disposer de vivres et d’une radio. Une blessure ou l’épuisement rendrait la progression beaucoup plus dangereuse.",choices:[
-["Rester à la cabane pour récupérer","Repos et chaleur, mais vous perdez du temps.","cabin","technique",7,{energy:2,health:1,time:1}],
+["Rester à la cabane pour récupérer","Repos et chaleur, mais vous perdez du temps.","cabin","technique",5,{energy:2,health:1,time:1}],
 ["Partir vers le hameau malgré la météo","Vous tentez d’atteindre des secours plus vite.","village","endurance",9,{energy:-1}],
-["Construire un abri de fortune","La réussite dépend de votre technique et du matériel.","cabin","technique",8,{energy:-1},{item:"Abri improvisé"}]
+["Construire un abri de fortune","La réussite dépend de votre technique et du matériel.","cabin","technique",6,{energy:-1},{item:"Abri improvisé"}]
 ]},
 night:{ch:"Chapitre 5 · Le mauvais temps",title:"La nuit tombe",art:"storm",text:"Le vent se lève et la température chute. La cabane offre un toit, mais le hameau pourrait disposer de vivres et d’une radio. Une blessure ou l’épuisement rendrait la progression beaucoup plus dangereuse.",choices:[
-["Rester à la cabane pour récupérer","Repos et chaleur, mais vous perdez du temps.","cabin","technique",7,{energy:2,hp:1,time:1}],
+["Rester à la cabane pour récupérer","Repos et chaleur, mais vous perdez du temps.","cabin","technique",5,{energy:2,hp:1,time:1}],
 ["Partir vers le hameau malgré la météo","Vous tentez d’atteindre des secours plus vite.","village","endurance",9,{energy:-1}],
-["Construire un abri de fortune","La réussite dépend de votre technique et du matériel.","cabin","technique",8,{energy:-1},{item:"Abri improvisé"}]
+["Construire un abri de fortune","La réussite dépend de votre technique et du matériel.","cabin","technique",6,{energy:-1},{item:"Abri improvisé"}]
 ]},
 village:{ch:"Chapitre 6 · Le hameau",title:"Des lumières dans la vallée",art:"village",text:"Trois maisons sont encore debout. Une famille a barricadé la porte d’une grange ; deux autres personnes cherchent de l’eau. Une radio fonctionne par intermittence, mais sa batterie est presque vide. On vous dit qu’un point de secours se trouve plus bas, au prix d’une dernière descente.",choices:[
-["Proposer votre aide en échange de vivres","La coopération peut améliorer votre état et votre réputation.","rescue","sangfroid",7,{energy:-1},{trust:2,food:2,water:2}],
-["Économiser vos forces et demander le chemin","Vous évitez de vous attarder.","rescue","observation",7,{energy:-1},{clue:1}],
+["Proposer votre aide en échange de vivres","La coopération peut améliorer votre état et votre réputation.","rescue","sangfroid",5,{energy:-1},{trust:2,food:2,water:2}],
+["Économiser vos forces et demander le chemin","Vous évitez de vous attarder.","rescue","observation",5,{energy:-1},{clue:1}],
 ["Essayer de remettre la radio en état","Avec des outils, vous pouvez améliorer le signal.","rescue","technique",9,{time:1},{clue:2,trust:1}]
 ]},
 ending:{ch:"Épilogue · Au-delà du col",title:"Le point de secours",art:"ending",text:"Vous atteignez enfin un point de secours installé dans un bâtiment communal. Une équipe de bénévoles distribue des couvertures, de l’eau et des soins de première nécessité. La situation dans les vallées reste incertaine, mais vous n’êtes plus seul. Vos choix, votre état physique et l’aide que vous avez donnée ont façonné votre arrivée.",choices:[]}
@@ -121,7 +121,7 @@ function log(t){G.journal.unshift(t);G.journal=G.journal.slice(0,22)}
 function clamp(){G.hp=Math.max(0,Math.min(6,G.hp));G.energy=Math.max(0,Math.min(6,G.energy));G.food=Math.max(0,Math.min(6,G.food));G.water=Math.max(0,Math.min(6,G.water))}
 function effects(e={}){for(let [k,v] of Object.entries(e)){if(k==='item'){if(!G.items.includes(v))G.items.push(v)}else if(k==='condition'){if(!G.conditions.includes(v))G.conditions.push(v)}else if(k==='trust'||k==='clue'||k==='time')G[k]=Math.max(0,G[k]+v);else if(['hp','energy','food','water'].includes(k))G[k]+=v}clamp()}
 function test(stat,dc,bonus=0,forcedDie=null){let die=forcedDie||1+Math.floor(Math.random()*6),skill=G.stats[stat]||1,inj=G.conditions.includes('Entorse')&&stat==='endurance'?-2:0,weather=G.conditions.includes('Hypothermie')?-1:0,total=die+skill+bonus+inj+weather;return {die,skill,bonus:bonus+inj+weather,total,dc,ok:total>=dc}}
-function goChoice(c){if(c.stat&&!window.skipNextDice){if(window.diceBusy)return;window.diceBusy=true;let stage=document.getElementById('diceStage');stage.innerHTML='<div class="dice-wrap"><div class="die rolling" id="rollingDie">⚄</div><div><div class="dice-caption">Le dé roule…</div><div class="dice-sub">Le sort de votre action se décide.</div></div></div>';let die=document.getElementById('rollingDie');let faces=['⚀','⚁','⚂','⚃','⚄','⚅'];let ticks=0;let interval=setInterval(()=>{die.textContent=faces[Math.floor(Math.random()*6)];ticks++},180);setTimeout(()=>{clearInterval(interval);let result=Math.floor(Math.random()*6)+1;die.classList.remove('rolling');die.textContent=['⚀','⚁','⚂','⚃','⚄','⚅'][result-1];stage.querySelector('.dice-caption').textContent='Résultat du dé : '+result;stage.querySelector('.dice-sub').textContent='Calcul du test…';window.diceResult=result;setTimeout(()=>{window.diceBusy=false;window.skipNextDice=true;goChoice(c)},1250)},1800);return}if(window.skipNextDice)window.skipNextDice=false;document.getElementById('result').innerHTML='';if(c.action==='use'){useItem(c.item);return}let msg='';if(c.stat){let r=test(c.stat,c.dc,G.items.includes('Petite trousse à outils')&&c.stat==='technique'?1:0,window.diceResult);window.diceResult=null;msg=`<strong>Test ${SN[c.stat]} :</strong> dé ${r.die} + compétence ${r.skill}${r.bonus?` ${r.bonus>0?'+':''}${r.bonus}`:''} = ${r.total}, seuil ${r.dc}. <b class="${r.ok?'goodtext':'dangertext'}">${r.ok?'Réussite':'Échec'}</b><br>${r.ok?c.success||'Vous réussissez sans incident.':c.fail||'Vous échouez et perdez du temps.'}`;effects(c.cost||{});effects(r.ok?c.win||{}:c.lose||{});log((r.ok?'Réussite : ':'Échec : ')+(c.label||''));if(!r.ok&&Math.random()<.22&&!G.conditions.includes('Entorse')&&c.stat==='endurance'){effects({condition:'Entorse',hp:-1});msg+='<br><span class="dangertext">Vous vous tordez la cheville : entorse.</span>';log('Blessure : entorse à la cheville.')} }
+function goChoice(c){if(c.stat&&!window.skipNextDice){if(window.diceBusy)return;window.diceBusy=true;let stage=document.getElementById('diceStage');stage.innerHTML='<div class="dice-wrap"><div class="die rolling" id="rollingDie">⚄</div><div><div class="dice-caption">Le dé roule…</div><div class="dice-sub">Le sort de votre action se décide.</div></div></div>';let die=document.getElementById('rollingDie');let faces=['⚀','⚁','⚂','⚃','⚄','⚅'];let ticks=0;let interval=setInterval(()=>{die.textContent=faces[Math.floor(Math.random()*6)];ticks++},180);setTimeout(()=>{clearInterval(interval);let result=Math.floor(Math.random()*6)+1;die.classList.remove('rolling');die.textContent=['⚀','⚁','⚂','⚃','⚄','⚅'][result-1];stage.querySelector('.dice-caption').textContent='Résultat du dé : '+result;stage.querySelector('.dice-sub').textContent='Dé bloqué sur '+result+' — calcul du test…';window.diceResult=result;setTimeout(()=>{window.diceBusy=false;window.skipNextDice=true;goChoice(c)},1250)},1800);return}if(window.skipNextDice)window.skipNextDice=false;document.getElementById('result').innerHTML='';if(c.action==='use'){useItem(c.item);return}let msg='';if(c.stat){let r=test(c.stat,c.dc,G.items.includes('Petite trousse à outils')&&c.stat==='technique'?1:0,window.diceResult);window.diceResult=null;msg=`<strong>Résultat du lancer : ${r.die}/6</strong><br><strong>Test ${SN[c.stat]} :</strong> dé ${r.die} + compétence ${r.skill}${r.bonus?` ${r.bonus>0?'+':''}${r.bonus}`:''} = ${r.total}, seuil ${r.dc}. <b class="${r.ok?'goodtext':'dangertext'}">${r.ok?'Réussite':'Échec'}</b><br>${r.ok?c.success||'Vous réussissez sans incident.':c.fail||'Vous échouez et perdez du temps.'}`;effects(c.cost||{});effects(r.ok?c.win||{}:c.lose||{});log((r.ok?'Réussite : ':'Échec : ')+(c.label||''));if(!r.ok&&Math.random()<.22&&!G.conditions.includes('Entorse')&&c.stat==='endurance'){effects({condition:'Entorse',hp:-1});msg+='<br><span class="dangertext">Vous vous tordez la cheville : entorse.</span>';log('Blessure : entorse à la cheville.')} }
 else{effects(c.cost||{});effects(c.win||{});msg=c.success||'Vous poursuivez votre route.';log(c.label||msg)}
 G.time++;if(G.time%2===0){effects({food:-1,water:-1});log('Deux étapes se sont écoulées : vous consommez une ration et de l’eau.')}
 if(G.energy<=1&&!G.conditions.includes('Épuisement')){effects({condition:'Épuisement'});msg+='<br><span class="dangertext">La fatigue devient dangereuse : épuisement.</span>'}
